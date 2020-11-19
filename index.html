@@ -2,17 +2,34 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>JS Internal Template</title>
+    <title>Summarizer</title>
     <script>
       //you can define JS code here
       function sumInputFields(){
         //put your logic to sum input fields here
-        
+        let field1_string = document.getElementById("field1").value;
+
+        let field2_string = document.getElementById("field2").value;
+
+        let result = parseFloat(field1_string) + parseFloat(field2_string);
+
+        document.getElementById("result").innerHTML = result;
       }
     </script>
   </head>
   <body>
   <!-- Put your form fields and output Element here-->
-    
+    <h1>A very simple calculator</h1>
+    <form>
+      <input id="field1" type="text">
+      +
+      <input id="field2" type="text">
+      =
+      <span id="result"></span>
+      
+      <br><br>
+      
+      <input type="button" onclick="sumInputFields()" value="Calculate">
+    </form>
   </body>
 </html>
